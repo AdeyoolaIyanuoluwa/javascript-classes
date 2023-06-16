@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Enter Your Score" id="userScore">
+    <button onclick="checkScore()">Check Score</button>
+    <script>
+    
+        function checkScore(){
+            //var scoreOfUser = document.getElementById("userScore").value
+            var scoreOfUser = userScore.value
+            var jambScore = scoreOfUser
+            var cutOffMark = 140
+            if(jambScore>cutOffMark){
+                alert("You finally made it!")
+            }else if (jambScore==cutOffMark){
+                alert("Oriyomi!")
+            }else{
+                alert("Failed")
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+         {/* if(5==="5"){
+            alert("Correct guy")
+        } */}
+        {/* var storeNumber = 419  ;
+        if(storeNumber%2==0){
+            alert("Na even number i be!")
+        }else if(storeNumber%2>0){
+            alert("Na Odd Number I be")
+        } */}
+        {/* var storeNumber = 30;
+        if(storeNumber%5==0){
+            alert("I am divisible by 5");
+        }else if(storeNumber%3==0){
+            alert("I am divisible by 3");
+        }else if(storeNumber%2==0){
+            alert("I am divisible by 2");
+        } */}
+        {/* var storeNumber = 70
+        if(storeNumber%2==0&&storeNumber%3==0&&storeNumber%5==0){
+            alert("We have found toi!")
+        }else{
+            alert("Depart from me, you workers of undefined")
+        } */}
+    </script>
+</body>
+</html>

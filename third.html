@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <center>
+            <h1>ATM MACHINE</h1>
+            <table border="1" width="400px" height="200px">
+                <tr>
+                    <td>
+                        <button onclick="withdraw()">Withdraw</button>
+                    </td>
+                    <td rowspan="4">
+                        <div id="disp"></div>
+                        <input type="text" id="userInput">
+                    </td>
+                    <td><button onclick="deposit()">Deposit</button></td>
+                </tr>
+                <tr>
+                    <td><button>Transfer</button></td>
+                    <td><button>Pay Bills</button></td>
+                </tr>
+                <tr>
+                    <td><button>Airtime</button></td>
+                    <td><button>Change Pin</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="checkBalance()">Check Balance</button></td>
+                    <td><button>Extra</button></td>
+                </tr>
+        </table>
+        </center>
+        <!-- <button onclick="test()">test</button> -->
+        <script>
+            var balance = 1000
+            var mySong = new Audio("Ayra_star.mp3")
+            function withdraw(){
+                var amountEntered = Number(userInput.value)
+                if(amountEntered>balance){
+                    alert("Insufficient fund, sapa no do you well o!")
+                }else if(amountEntered<0){
+                    alert("Out of bounds")
+                }else if(amountEntered==""){
+                    alert("Kindly enter an amount")
+                }else{
+                    balance = balance - amountEntered
+                    alert("Withdrawal Successful and your current balance is $" + balance)
+                }
+                
+            }
+            function deposit(){
+                var amountEntered = Number(userInput.value)
+                if(amountEntered < 0){
+                    alert("Am i joke to you?")
+                }
+                else if(amountEntered == ""){
+                    alert("invalid")
+                }
+                else{
+                    balance = amountEntered + balance
+                    alert("Deposit Successful and your new balance is $" + balance)
+                }
+              
+            }
+            function checkBalance(){
+                disp.innerHTML = "<h1>Your balance is $" + balance + "</h1>"
+                disp.style.backgroundColor = "red"
+                mySong.play()
+                //mySong.pause()
+            }
+            {/* function test(){
+                var balance = 1000
+                alert(balance)
+            } */}
+        </script>
+    </body>
+</html>
